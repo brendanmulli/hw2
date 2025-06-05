@@ -1,94 +1,125 @@
+/* Ensure HTML5 elements display as blocks for older browsers */
 header, hgroup, nav, footer, figure, figcaption, aside, section, article {
-    display: block;
+  display: block;
 }
 
+/* Main body styling with background image and basic typography */
 body {
-    background-color: #00569f;
-    color: #666666;
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
+  background: #00569f url(ptrbackground.jpg) repeat-x;
+  background-size: 20px 100%;
+  color: #666666;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 20px 0;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
+/* Wrapper for page content with centered alignment and shadow */
 #wrapper {
-    width: 80%;
-    min-width: 600px;
-    margin: 0 auto;
-    background: url(ptrbackground.jpg) no-repeat top center;
-    background-color: #FFFFFF;
+  width: 80%;
+  min-width: 600px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  min-height: calc(100vh - 40px);
 }
 
+/* Header section with dark background */
 header {
-    background-color: #000033;
-    color: #FFFFFF;
-    padding: 10px;
+  background-color: #000033;
+  color: #FFFFFF;
+  padding: 10px;
 }
-
 header h1 {
-    margin: 0;
-    font-size: 2em;
+  margin: 0;
+  font-size: 2em;
+  text-align: center;
 }
 
+/* Left navigation sidebar styling */
 nav {
-    float: left;
-    width: 160px;
-    background-color: #90c7e3;
-    padding: 10px;
+  float: left;
+  width: 160px;
+  background-color: #90c7e3;
+  padding: 10px;
+  box-sizing: border-box;
+  min-height: calc(100% - 50px);
+  margin-bottom: -456px;
+  padding-bottom: 456px;
 }
 
 nav ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
 }
 
+/* Navigation link styles including hover effects */
 nav a {
-    text-decoration: none;
-    color: #000033;
-    display: block;
-    padding: 5px 0;
+  text-decoration: none;
+  color: #000033;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  display: block;
+  padding: 5px 0;
 }
-
 nav a:visited {
-    color: #344873;
+  color: #344873;
 }
-
 nav a:hover {
-    color: #FFFFFF;
-    background-color: #000033;
+  color: #FFFFFF;
+  background-color: #000033;
 }
 
+/* Main content area that floats next to the nav */
 #content {
-    margin-left: 180px;
-    padding: 20px;
+  margin-left: 180px;
+  padding: 20px;
 }
 
+/* Image styling within content */
+#content img {
+  float: left;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+/* Heading styles with custom font family */
 h1, h2 {
-    font-family: Georgia, "Times New Roman", serif;
+  font-family: Georgia, "Times New Roman", serif;
 }
-
 h2 {
-    color: #3399CC;
+  color: #3399CC;
 }
 
+/* Special class for resort text */
 .resort {
-    color: #5C7FA3;
-    font-weight: bold;
+  color: #5C7FA3;
+  font-weight: bold;
 }
 
-ul {
-    list-style-image: url(marker.gif);
-    margin-top: 0;
-}
-
-footer {
-    clear: both;
-    font-family: Georgia, "Times New Roman", serif;
-    text-align: center;
-    padding: 20px;
-    background-color: #FFFFFF;
-}
-
+/* Contact section with smaller text */
 #contact {
-    font-size: 90%;
+  font-size: 90%;
+}
+
+/* Custom list styling with marker image */
+#content ul {
+  list-style-image: url(marker.gif);
+  margin-top: 0;
+}
+
+/* Footer that clears floats and matches content width */
+footer {
+  clear: both;
+  font-family: Georgia, "Times New Roman", serif;
+  text-align: left;
+  padding: 20px;
+  background-color: #ffffff;
+  margin-left: 180px;
+}
+
+footer p {
+  margin: 5px 0;
 }
